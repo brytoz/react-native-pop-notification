@@ -1,0 +1,40 @@
+{
+  "name": "react-native-pop-notifications",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "module": "lib/index.esm.js",
+  "types": "lib/index.d.ts",
+  "react-native": "lib/index.js",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "npx babel src --out-dir lib --extensions .js,.jsx,.ts,.tsx",
+    "build": "npm run build:types && npm run build:js",
+    "prepare": "npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "peerDependencies": {
+    "react": ">=19.0.0",
+    "react-native": ">=0.78.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.27.0",
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "@babel/preset-react": "^7.26.3",
+    "@babel/preset-typescript": "^7.27.0",
+    "@types/react": "^19.0.12",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "eventemitter3": "^5.0.1",
+    "react-native-background-timer": "^2.4.1",
+    "react-native-keep-awake": "^4.0.0",
+    "react-native-tcp-socket": "^6.2.0"
+  }
+}
